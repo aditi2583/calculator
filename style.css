@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: #fff;
+}
+
+.calculator-display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #222;
+    color: white;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    padding: 20px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.key:hover {
+    background: #d3d3d3;
+}
+
+.key[data-action="clear"],
+.key[data-action="delete"],
+.key[data-action="equals"] {
+    background: #ff7675;
+    color: white;
+}
+
+.key[data-action="clear"]:hover,
+.key[data-action="delete"]:hover,
+.key[data-action="equals"]:hover {
+    background: #ff5a5a;
+}
+
+.key[data-action="divide"],
+.key[data-action="multiply"],
+.key[data-action="subtract"],
+.key[data-action="add"] {
+    background: #74b9ff;
+    color: white;
+}
+
+.key[data-action="divide"]:hover,
+.key[data-action="multiply"]:hover,
+.key[data-action="subtract"]:hover,
+.key[data-action="add"]:hover {
+    background: #4aa7ff;
+}
